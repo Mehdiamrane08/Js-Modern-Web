@@ -1,0 +1,59 @@
+doctype html
+head
+  title #{headerTitle}
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  // Own styelsheet to deal with the validation constraint styles
+  link(rel='stylesheet' href='/stylesheets/style.css')
+// Viewport height of 100% (see CSS)
+//
+  Use of bootstrap to get a responsive design : container-fluid for a full width
+  h-100 for a full height element
+  d-flex to create a flexbox container and transform direct children elements into flex items
+  flex-column to set a vertical direction
+.container-fluid.h-100.d-flex.flex-column
+  // Header row : dark background, white text
+  .row.bg-dark.py-2
+    .col
+      header.text-center.text-white.font-weight-bold        
+        h4 #{headerTitle}  
+        
+  //
+    Page content row.
+    flex-grow-1: Fill available space
+  .row.flex-grow-1.mb-5
+    .d-none.d-md-block.col-md.bg-dark    
+
+    .col.col-md-10.mt-2
+      // navigation bar
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light.mb-2
+        a.navbar-brand(href='/') MyCMS
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          .navbar-nav
+            a.nav-item.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+            a.nav-item.nav-link(href='/register') Register
+            a.nav-item.nav-link(href='/list') List users
+      // block for views...
+      block content
+    .d-none.d-md-block.col-md.bg-dark
+  
+
+  // Footer row
+  .row.bg-dark.fixed-bottom
+    .col
+      footer.py-2.text-center.text-white.font-weight-bold
+        h5 #{footerText}
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+// to use modules, you have to set the type="module" attribute
+//script(src='/javascripts/...' type='module')

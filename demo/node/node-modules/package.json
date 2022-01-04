@@ -1,0 +1,16 @@
+{
+  "name": "node-modules",
+  "version": "1.0.0",
+  "description": "1. Install the required packages\r     a) go to the /demo/node-modules directory in your terminal, e.g. : right click on \"node-modules\" folder, Open in Terminal\r     b) install the mime and shortid required packages : \r     npm i mime shortid\r 2. Run your application\r     a) go to the /demo/node-modules directory in your terminal, e.g. : right click on \"node-modules\" folder, Open in Terminal\r     b) run the main script : node node-modules.js",
+  "main": "node-modules.js",
+  "dependencies": {
+    "mime": "^2.4.6",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node node-modules.js"
+  },
+  "author": "e-Baron",
+  "license": "ISC"
+}

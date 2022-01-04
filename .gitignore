@@ -1,0 +1,19 @@
+# ignore all node_modules folders and nested folders & files
+node_modules
+# ignore the users.json data file
+users.json
+# ignore the specific VS Code configuration parameters
+.vscode
+push-heroku.bash
+push-project-heroku.bash
+# some demo needs /dist => removed from .gitignore
+#dist
+#Solutions to exercises to be ignored
+#exercises/fiche-01
+#exercises/fiche-02
+#exercises/fiche-03
+#exercises/fiche-04
+#exercises/fiche-05
+#exercises/fiche-06
+#exercises/fiche-07
+#exercises/fiche-08

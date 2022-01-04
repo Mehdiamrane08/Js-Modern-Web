@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+}
+
+html {    
+    /* The Webpack file-loader recognise /src/img/js-logo.png as local file and replace 
+    "./image/js-logo.png" with the final path to the image in the output directory (/dist)*/
+    background-image : url(../img/pizza.jpg);
+    background-size : cover;
+}
+
+body { 
+    /*to easily deal with sticky footer*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+header{
+    text-align: center;    
+}
+
+main{
+    text-align: center;  
+     /*to easily deal with sticky footer:
+     grow the main to fill the space*/
+    flex: 1 0 auto;
+}
+
+footer{
+    text-align: center;    
+}
+
+#my-clock{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.printerror, .listpizzas{
+    margin-top: 40px;
+    color: whitesmoke;
+    font-size: large;  
+    background-color: brown;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login, .addpizza{
+    margin-top: 40px;
+    background-color: brown;
+
+}
+
+button,input{
+    background-color: yellow;
+    border-style:groove;
+}

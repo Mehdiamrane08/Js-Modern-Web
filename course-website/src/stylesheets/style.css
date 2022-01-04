@@ -1,0 +1,344 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* modern solution with flex to provide a sticky footer with no overlap with page div*/
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.main {
+  /* modern solution with flex to provide a sticky footer with no overlap with page div*/
+  flex: 1;
+}
+
+a {
+  color: #00b7ff;
+}
+
+/* CSS to deal with constraint validation styles */
+/*
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid green;
+}*/
+
+/* "back to top button" thanks to https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+#backToTopButton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 80px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: cornflowerblue; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#backToTopButton:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.table {
+  table-layout: fixed;
+}
+
+/*Style for the table of ProjectTable */
+
+.name {
+  width: 8rem;
+}
+
+.description {
+  width: 15rem;
+}
+
+.projectMembers {
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.quitter {
+  width: 6rem;
+}
+
+.joindre {
+  width: 6rem;
+}
+
+.voir {
+  width: 5rem;
+}
+
+.effacer {
+  width: 6rem;
+}
+
+/*Style for ProjectView table*/
+.property {
+  width: 40%;
+  word-wrap: break-word;
+}
+
+.value {
+  width: 60%;
+  word-wrap: break-word;
+}
+
+/*Style for the table of ContentPage */
+
+.part {
+  width: 4rem;
+}
+
+.subject {
+  width: 10rem;
+}
+
+.courseFiles {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.courseVideos {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.courseDemos {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.courseFiles {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.exerciceInstructions {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.exerciceSolutions {
+  width: 15rem;
+  word-wrap: break-word;
+}
+
+.my-review-summary,
+.all-reviews-summary,
+.project-review-summary {
+  border-style: solid;
+  border-width: thin;
+  border-color: lightgray;
+  padding: 0.6rem;
+  display: inline-block;
+  text-align: center;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.my-review-table{
+  margin-right: 1rem;
+}
+
+.review-header {
+  display: flex;
+  /*flex-direction: column;
+  align-items: center;*/
+  justify-content: center;
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+
+.liked-review {
+  color: crimson;
+  font-weight: bold;
+  /*stroke: darkred;
+  stroke-width: 1rem;*/
+}
+
+/*
+.fa-comment{
+  color:yellow;
+  
+}*/
+
+.expected-review {
+  color: darkorange;
+  font-weight: bold;
+  /*stroke: gold;
+  stroke-width: 1rem;*/
+}
+
+.performed-review {
+  color: limegreen;
+  font-weight: bold;
+  /*stroke: darkolivegreen;
+  stroke-width: 1rem;*/
+}
+
+.update-review {
+  color:darkblue;
+  font-weight: bold;  
+  cursor: pointer;
+}
+
+.my-reviews {
+  margin-top: 1rem;
+}
+
+.my-reviews-table,
+.all-reviews-table {
+  margin-top: 1rem;
+}
+
+
+
+.presentationUrl {
+  width: 16rem;
+  word-wrap: break-word;
+}
+
+.youtube-picture{
+  width: 15rem;  
+  display:block;
+}
+
+.frontendRepo {
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.backendRepo {
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.frontendProductionUrl {
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.arevoir,
+.revue\? {
+  width: 5rem;
+}
+
+.praise, .notImpressed {
+  width: 15rem;
+}
+
+
+.détails\? {
+  width: 5rem;
+}
+
+.short-description {
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.perform-review {
+  cursor: pointer;
+}
+
+.print-error {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  color: whitesmoke;
+  font-size: large;
+  background-color: brown;
+}
+
+.countLiked {
+  width: 5rem;
+}
+
+.like-col {
+  width: 5rem;
+}
+
+.countReviews {
+  width: 5rem;
+}
+
+.potential-review {
+  cursor: pointer;
+  color: rgb(50, 53, 205);
+  font-weight: bold;
+  
+}
+
+.detailed-review {
+  cursor: pointer;
+  color: rgb(41, 69, 145);
+  font-weight: bold;
+}
+
+.review-info, .project-info {
+  margin-top: 2rem;
+}
+
+/*Style for detailled review tables*/
+.review-property, .review-title {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+.review-value{
+  width: 70%;
+  word-wrap: break-word;
+}
+
+/*HEART checkbox 
+author : https://codepen.io/sunny-lella/pen/dXkLjb
+*/
+
+[id="like"] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for="like"] {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 6em;
+  align-self: center;
+  transition: color 0.2s ease-in-out;
+}
+
+[for="like"]:hover {
+  color: grey;
+}
+
+[for="like"]::selection {
+  color: none;
+  background: transparent;
+}
+
+[for="like"]::moz-selection {
+  color: none;
+  background: transparent;
+}
+
+[id="like"]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@keyframes heart {
+  0%,
+  17.5% {
+    font-size: 0;
+  }
+}
+/* --------------------------------------- */

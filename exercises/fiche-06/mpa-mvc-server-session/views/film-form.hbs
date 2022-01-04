@@ -1,0 +1,21 @@
+<h4>{{pageTitle}}</h4>
+<form action="/films" method="POST">
+    <div class="form-group">
+        <label for="title">Enter title</label>
+        <input class="form-control" type="text" name="title" id="title" required />
+    </div>
+    <div class="form-group">
+        <label for="duration">Enter duration</label>
+        <input class="form-control" type="number" name="duration" id="duration" required />
+    </div>
+    <div class="form-group">
+        <label for="budget">Enter budget</label>
+        <input class="form-control" type="number" name="budget" id="budget" required />
+    </div>
+    <div class="form-group">
+        <label for="link">Enter link</label>
+        <input class="form-control" type="text" name="link" id="link" required />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Add Film" />
+</form>
+<span id="errorMessage"></span>

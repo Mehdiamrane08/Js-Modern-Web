@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h4 #{pageTitle}
+    if isLogin
+        - var actionUrl = '/login'
+    else
+        - var actionUrl = '/register'
+    form(action=actionUrl method='post')
+        .form-group
+            label(for='email') Email
+            input#email.form-control(type='text' name='email' placeholder='Enter your email' required='' pattern='^\\w+([\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,4})+$')
+        .form-group
+            label(for='password') Password
+            input#password.form-control(type='password' name='password' placeholder='Enter your password' required='' pattern='.*[A-Z]+.*')
+        button#btn.btn.btn-primary(type='submit')
+            | Submit
+        // Create an alert component with bootstrap that is not displayed by default
+        #messageBoard.alert.alert-danger.mt-2.d-none
+        span#errorMessage
+    script(src='/javascripts/submit.js' type='module')

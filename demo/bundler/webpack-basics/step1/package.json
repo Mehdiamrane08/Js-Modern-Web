@@ -1,0 +1,14 @@
+{
+  "name": "step1",
+  "version": "1.0.0",
+  "description": "Migration vers Webpack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "e-baron",
+  "dependencies": {
+    "webpack": "^5.6.0"
+  }
+}

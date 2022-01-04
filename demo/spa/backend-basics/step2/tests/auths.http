@@ -1,0 +1,38 @@
+### Read all user accounts : unsafe / unprotected ressources : GET /auths/users/unsafe
+GET http://localhost:3000/auths/users/unsafe
+
+### Register a user : POST /auths/register
+POST http://localhost:3000/auths/register
+Content-Type: application/json
+
+{
+    "username":"me",
+    "password":"Me"
+}
+
+### Login a user : POST /auths/login
+POST http://localhost:3000/auths/login
+Content-Type: application/json
+
+{
+    "username":"me",
+    "password":"Me"
+}
+
+
+### Login a user : test wrong pwd : POST /auths/login
+POST http://localhost:3000/auths/login
+Content-Type: application/json
+
+{
+    "username":"me",
+    "password":"Metoo"
+}
+
+### Read all user accounts : very low protection, same token for all account : GET /auths/users
+GET http://localhost:3000/auths/users
+Authorization: Future signed token
+
+### Read all user accounts : wrong token : GET /auths/users
+GET http://localhost:3000/auths/users
+Authorization: wrong token

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h4 #{pageTitle}
+    ul.list-group.list-group-horizontal-lg
+        each item in userList
+            li.list-group-item= item.username
+        //each val, key in userList
+            //li.list-group-item= key
+            //each val, key in item                
+                li.list-group-item= key

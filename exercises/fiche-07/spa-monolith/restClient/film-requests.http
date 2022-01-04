@@ -1,0 +1,61 @@
+
+### Create the user james
+POST http://localhost:800/api/users/
+Content-Type: application/json
+
+{
+    "email":"james@cool.com",
+    "password":"Jj"
+}
+
+### Log the user james (the tool remember the cookies for subsequent requests !)
+POST http://localhost:800/api/users/login
+Content-Type: application/json
+
+{
+    "email":"james@cool.com",
+    "password":"Jj"
+}
+
+### View all films
+GET http://localhost:800/api/films
+
+### Add a film
+POST http://localhost:800/api/films/
+Content-Type: application/json
+
+{
+    "title":"Star Wars: The Phantom Menace (Episode I)",
+    "duration": "136",
+    "budget": "115000000",
+    "link":"https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace"
+}
+
+### Add another film
+POST http://localhost:800/api/films/
+Content-Type: application/json
+
+{
+    "title":"Star Wars: Episode 2",
+    "duration": "1",
+    "budget": "11",
+    "link":"findIt.com"
+}
+
+### Update film with ID == 2
+
+PUT http://localhost:800/api/films/2
+Content-Type: application/json
+
+{
+    "title":"Star Wars: Episode 2",
+    "duration": "11",
+    "budget": "111",
+    "link":"www.findIt.com"
+}
+
+### Delete the film with ID == 2
+DELETE http://localhost:800/api/films/2
+
+### Read film with ID == 1
+GET http://localhost:800/api/films/1

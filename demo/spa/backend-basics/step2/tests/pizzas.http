@@ -1,0 +1,31 @@
+### Read all pizzas : GET /pizza
+GET http://localhost:3000/pizzas
+
+### Create a pizza without authorization : POST /pizza
+POST http://localhost:3000/pizzas
+Content-Type: application/json
+
+{
+    "title":"Magic Green",
+    "content":"Epinards, Brocolis, Olives vertes, Basilic"
+}
+
+### Create a pizza with the right authorization / token (not safe, but useful for next step) : POST /pizza
+POST http://localhost:3000/pizzas
+Content-Type: application/json
+Authorization: Future signed token
+
+{
+    "title":"Magic Green",
+    "content":"Epinards, Brocolis, Olives vertes, Basilic"
+}
+
+### Create a pizza with the wrong authorization / token : POST /pizza
+POST http://localhost:3000/pizzas
+Content-Type: application/json
+Authorization: Wrong token
+
+{
+    "title":"Magic Green",
+    "content":"Epinards, Brocolis, Olives vertes, Basilic"
+}

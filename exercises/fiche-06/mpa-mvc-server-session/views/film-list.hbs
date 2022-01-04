@@ -1,0 +1,21 @@
+<h4>{{pageTitle}}</h4>
+<div id="tableFilms" class="table-responsive mt-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Duration (min)</th>
+                <th scope="col">Budget (million)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each filmList}}
+            <tr>
+                <td><a href="{{this.link}}" target="_blank">{{this.title}}</a></td>
+                <td>{{this.duration}}</td>
+                <td>{{this.budget}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+### Read all pizzas : GET /pizza
+GET http://localhost:3000/pizzas
+
+### Create a pizza : POST /pizza
+POST http://localhost:3000/pizzas
+Content-Type: application/json
+
+{
+    "title":"Magic Green",
+    "content":"Epinards, Brocolis, Olives vertes, Basilic"
+}

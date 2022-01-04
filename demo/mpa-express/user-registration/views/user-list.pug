@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h4 #{pageTitle}
+    ul.list-group.list-group-horizontal-lg
+        each item in userList
+            li.list-group-item= item.email

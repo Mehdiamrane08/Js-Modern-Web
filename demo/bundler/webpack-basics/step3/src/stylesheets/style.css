@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+}
+
+html {    
+    /* The Webpack file-loader recognise /src/img/js-logo.png as local file and replace 
+    "./image/js-logo.png" with the final path to the image in the output directory (/dist)*/
+    background-image : url(../img/pizza.jpg);
+    background-size : cover;
+}
+
+body { 
+    /*to easily deal with sticky footer*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+header{
+    text-align: center;    
+}
+
+main{
+    text-align: center;  
+     /*to easily deal with sticky footer:
+     grow the main to fill the space*/
+    flex: 1 0 auto;
+}
+
+footer{
+    text-align: center;    
+}
+
+#my-clock{
+    margin-left: auto;
+    margin-right: auto;
+}
